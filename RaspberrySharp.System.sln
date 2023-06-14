@@ -1,25 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE3AA526-5A9D-465A-B9B0-7A07AE6824B5}"
 	ProjectSection(SolutionItems) = preProject
-		Icon.png = Icon.png
-		Raspberry.System.nuspec = Raspberry.System.nuspec
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raspberry.System", "Raspberry.System\Raspberry.System.csproj", "{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Board", "Test.Board\Test.Board.csproj", "{51780F8A-E5F5-4DC8-84B4-B282800A3396}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9D7C7530-F5CB-49BF-891B-7E1C705510EF}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7102091A-58D6-4ACC-90B7-6729AEF0586F}"
 EndProject
@@ -59,5 +50,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396} = {7102091A-58D6-4ACC-90B7-6729AEF0586F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23A32383-D12B-4439-9721-BF430632EFA0}
 	EndGlobalSection
 EndGlobal
