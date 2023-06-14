@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iminetsoft.Raspberry.System.Core, Version=8.0.8565.29111, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iminetsoft.Rasberry.System.Core.8.0.6.14\lib\net40\Iminetsoft.Raspberry.System.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -42,10 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Raspberry.System\Raspberry.System.csproj">
-      <Project>{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}</Project>
-      <Name>Raspberry.System</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
