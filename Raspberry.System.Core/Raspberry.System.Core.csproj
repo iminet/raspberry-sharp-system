@@ -3,18 +3,22 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0;net40;net45;net48</TargetFrameworks>
     <RootNamespace>Raspberry</RootNamespace>
-    <Version>1.0.0.0</Version>
+    <AssemblyName>Iminetsoft.Raspberry.System.Core</AssemblyName>
+    <Version>8.0.6.14</Version>
     <Authors>iminet, ebezine, nzaugg</Authors>
-    <Copyright>Iminetsoft © 2021</Copyright>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <Copyright>Iminetsoft © 2023</Copyright>
+    <AssemblyVersion>8.0.*</AssemblyVersion>
+    <FileVersion>8.0.*</FileVersion>
     <PackageProjectUrl>https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp</PackageProjectUrl>    
-    <PackageId>Iminetsoft.Rasberry.System</PackageId>
-    <PackageIconUrl></PackageIconUrl>
+    <PackageId>Iminetsoft.Rasberry.System.Core</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/iminet/raspberry-sharp-system/79c5febe2d3d7a667a45d44ee9cd521da52a3863/Raspberry.System.Core/Resources/3069712_circle_os_pi_raspberry_round%20icon_icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp</RepositoryUrl>
-    <PackageTags>Raspberry Pi system Raspi</PackageTags>
+    <PackageTags>Raspberry Pi system Raspi</PackageTags> 
+    <Description>A .NET/Mono/.Net Core Library for Raspberry Pi</Description>
+    <PackageReleaseNotes>Added package icon and other metadata</PackageReleaseNotes>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
 
   <ItemGroup>

@@ -8,11 +8,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raspberry.System", "Raspberry.System\Raspberry.System.csproj", "{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raspberry.System", "Raspberry.System\Raspberry.System.csproj", "{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Board", "Test.Board\Test.Board.csproj", "{51780F8A-E5F5-4DC8-84B4-B282800A3396}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7102091A-58D6-4ACC-90B7-6729AEF0586F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raspberry.System.Core", "Raspberry.System.Core\Raspberry.System.Core.csproj", "{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,18 @@ Global
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A730164-F5F3-4CE8-8B72-DC8A49E46BC7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
