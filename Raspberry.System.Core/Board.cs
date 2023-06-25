@@ -176,6 +176,64 @@ namespace Raspberry
                         get { return connectorPinout.Value; }
                 }
 
+                /// <summary>
+                /// Gets the total size of memory
+                /// <value>
+                /// Total size of memory in bytes
+                /// </value>
+                /// </summary>
+                public long MemorySize
+                {
+                        get
+                        {
+                                long memsize = 0;
+                                string data;
+                                settings.TryGetValue("MemTotal", out data);
+
+                                var separator = data.IndexOf(' ');
+                                if (!String.IsNullOrWhiteSpace(data) && separator > 0)
+                                {
+                                        var memvalue = data.Substring(0, separator).Trim();
+                                        var memunit = data.Substring(separator + 1).Trim();
+
+                                        Int64.TryParse(memvalue, out memsize);
+
+                                        long multiplier = 0;
+                                        switch (memunit)
+                                        {
+                                                case "kB":
+                                                case "KB":
+                                                case "kb":
+                                                        multiplier = 1024;
+                                                        break;
+                                                case "MB":
+                                                        multiplier = 1024 * 1024;
+                                                        break;
+                                                case "GB":
+                                                        multiplier = 1024 * 1024 * 1024;
+                                                        break;
+                                                default:
+                                                        multiplier = 0;
+                                                        break;
+                                        }
+
+                                        memsize *= multiplier;
+
+
+                                }
+                                return memsize;
+                        }
+                }
+
+                public string ModelName
+                {
+                        get
+                        {
+                                string model;
+                                return settings.TryGetValue("Model", out model) ? model : null;
+                        }
+                }
+
                 #endregion
 
                 #region Private Helpers
@@ -184,27 +242,31 @@ namespace Raspberry
                 {
                         try
                         {
-                                const string filePath = "/proc/cpuinfo";
-
-                                var cpuInfo = File.ReadAllLines(filePath);
                                 var settings = new Dictionary<string, string>();
-                                var suffix = string.Empty;
-
-                                foreach (var l in cpuInfo)
+                                string[] filepaths = { "/proc/cpuinfo", "/proc/meminfo" };
+                                //const string filePath = "/proc/cpuinfo";
+                                foreach (string filePath in filepaths)
                                 {
-                                        var separator = l.IndexOf(':');
+                                        var cpuInfo = File.ReadAllLines(filePath);
 
-                                        if (!string.IsNullOrWhiteSpace(l) && separator > 0)
+                                        var suffix = string.Empty;
+
+                                        foreach (var l in cpuInfo)
                                         {
-                                                var key = l.Substring(0, separator).Trim();
-                                                var val = l.Substring(separator + 1).Trim();
-                                                if (string.Equals(key, "processor", StringComparison.InvariantCultureIgnoreCase))
-                                                        suffix = "." + val;
+                                                var separator = l.IndexOf(':');
 
-                                                settings.Add(key + suffix, val);
+                                                if (!string.IsNullOrWhiteSpace(l) && separator > 0)
+                                                {
+                                                        var key = l.Substring(0, separator).Trim();
+                                                        var val = l.Substring(separator + 1).Trim();
+                                                        if (string.Equals(key, "processor", StringComparison.InvariantCultureIgnoreCase))
+                                                                suffix = "." + val;
+
+                                                        settings.Add(key + suffix, val);
+                                                }
+                                                else
+                                                        suffix = "";
                                         }
-                                        else
-                                                suffix = "";
                                 }
 
                                 return new Board(settings);

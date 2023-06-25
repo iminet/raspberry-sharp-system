@@ -4,22 +4,28 @@
     <TargetFrameworks>netstandard2.0;net5.0;net40;net45;net48</TargetFrameworks>
     <RootNamespace>Raspberry</RootNamespace>
     <AssemblyName>Iminetsoft.Raspberry.System.Core</AssemblyName>
-    <Version>8.0.6.14</Version>
+    <Version>8.0.6.25</Version>
     <Authors>iminet, ebezine, nzaugg</Authors>
     <Copyright>Iminetsoft © 2023</Copyright>
     <AssemblyVersion>8.0.*</AssemblyVersion>
     <FileVersion>8.0.*</FileVersion>
-    <PackageProjectUrl>https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp</PackageProjectUrl>    
+    <PackageProjectUrl>https://github.com/iminet/raspberry-sharp-system</PackageProjectUrl>    
     <PackageId>Iminetsoft.Rasberry.System.Core</PackageId>
-    <PackageIconUrl>https://raw.githubusercontent.com/iminet/raspberry-sharp-system/79c5febe2d3d7a667a45d44ee9cd521da52a3863/Raspberry.System.Core/Resources/3069712_circle_os_pi_raspberry_round%20icon_icon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp</RepositoryUrl>
+    <PackageIcon>3069712_circle_os_pi_raspberry_round icon_icon.png</PackageIcon>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/iminet/raspberry-sharp-system</RepositoryUrl>
     <PackageTags>Raspberry Pi system Raspi</PackageTags> 
     <Description>A .NET/Mono/.Net Core Library for Raspberry Pi</Description>
-    <PackageReleaseNotes>Added package icon and other metadata</PackageReleaseNotes>
+    <PackageReleaseNotes>Added model name string to the board class</PackageReleaseNotes>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Deterministic>false</Deterministic>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Resources\3069712_circle_os_pi_raspberry_round icon_icon.png" Pack="true" PackagePath="\"></None>
+    <None Include="..\Readme.md" Pack="true" PackagePath="\"></None>
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
